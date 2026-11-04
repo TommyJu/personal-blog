@@ -1,0 +1,7 @@
+baseURL: https://example.org/
+locale: en-us
+title: Tommy's Blog
+theme: ["PaperMod"]
+params:
+  defaultTheme: auto
+
