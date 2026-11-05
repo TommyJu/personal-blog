@@ -1,7 +1,91 @@
-baseURL: https://example.org/
+baseURL: "https://blog.tommyju.dev/"
 locale: en-us
-title: Tommy's Blog
+title: Tommy Ju
 theme: ["PaperMod"]
+# Tags
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+# Nav bar
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 10
 params:
+  env: production
+  description: "Tommy Ju's Personal Blog"
+  author: "Tommy Ju"
   defaultTheme: auto
+  # Favicon
+  assets:
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+    apple_touch_icon: "/apple-touch-icon.png"
+  # Home page
+  profileMode:
+    enabled: true
+    title: "Welcome to my blog" # optional default will be site title
+    subtitle: "I share programming knowledge, cycling tips, and insights from my own life."
+    imageUrl: "images/headshot.jpeg" # optional
+    imageTitle: "A picture of me" # optional
+    imageWidth: 160 # custom size
+    imageHeight: 160 # custom size
+    buttons:
+      - name: View Posts
+        url: "/posts"
+      - name: Filter by Tags
+        url: "/tags" 
+  socialIcons:
+    - name: "GitHub"
+      url: "https://github.com/TommyJu"
+    - name: "My Portfolio"
+      url: "https://www.tommyju.dev/"
+    - name: "Email"
+      url: "mailto:tommyju.dev@gmail.com"
+    - name: "LinkedIn"
+      url: "https://www.linkedin.com/in/tommyju/"
+    - name: "strava"
+      url: "https://www.strava.com/athletes/43983978"
+  # Post options
+  cover:
+    responsiveImages: false # Performance optimization
+  ShowToc: true
+  ShowCodeCopyButtons: true
+  ShowPageNums: true
+  ShowBreadCrumbs: true
+# Search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+
+
+
 

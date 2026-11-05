@@ -4,9 +4,8 @@
         {{- if site.Copyright }}
         <span>{{ site.Copyright | markdownify }}</span>
         {{- else }}
-        <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ site.Title }}</a></span>
+        <span>&copy; {{ now.Year }} <a href="https://github.com/TommyJu/personal-blog">{{ site.Title }}</a></span>
         {{- end }}
-        {{- print " · "}}
     {{- end }}
 
     {{- with site.Params.footer.text }}
@@ -21,11 +20,6 @@
         - Support us by sponsoring the project on GitHub Sponsors: https://github.com/sponsors/adityatelange
     */}}
     
-    <span>
-        Powered by
-        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
 </footer>
 {{- end }}
 
