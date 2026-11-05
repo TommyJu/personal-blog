@@ -2,6 +2,10 @@ baseURL: "https://blog.tommyju.dev/"
 locale: en-us
 title: Tommy Ju
 theme: ["PaperMod"]
+# Deployment configuration for image cache
+caches:
+  images:
+    dir: :cacheDir/images
 # Tags
 taxonomies:
   category: categories
