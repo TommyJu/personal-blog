@@ -2,6 +2,12 @@ baseURL: "https://blog.tommyju.dev/"
 locale: en-us
 title: Tommy Ju
 theme: ["PaperMod"]
+enableRobotsTXT: true
+# Enable raw HTML rendering for markdown posts! Be cautious about embedding unsafe HTML
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 # Deployment configuration for image cache
 caches:
   images:
